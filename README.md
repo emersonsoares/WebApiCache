@@ -7,11 +7,12 @@ A package that easily supports the caching actions in AspNet WebAPI.
 ## Usage
 
 ```c#
+using WebApiCache;
+
 public class CitiesController : ApiController
 {
-
     [OutputCacheWebApi]
-    public IEnumerable<Municipio> Get()
+    public IEnumerable<Cities> Get()
     {
         return new List<Cities>();
     }
@@ -21,11 +22,12 @@ public class CitiesController : ApiController
 By default timespan is 60 seconds, you can change this value as follows:
 
 ```c#
+using WebApiCache;
+
 public class CitiesController : ApiController
 {
-
     [OutputCacheWebApi(3600)]
-    public IEnumerable<Municipio> Get()
+    public IEnumerable<Cities> Get()
     {
         return new List<Cities>();
     }
